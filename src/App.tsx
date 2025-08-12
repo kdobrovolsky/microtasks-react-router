@@ -1,20 +1,23 @@
 import { NavLink, Route, Routes} from "react-router-dom";
-import {PageOne} from "./components/pages/PageOne";
-import {PageThree} from "./components/pages/PageThree";
-import {PageTwo} from "./components/pages/PageTwo";
 import styles from "./components/Site.module.css";
 import {Error404} from "./components/pages/Error404";
 import './index.css'
+import {Adidas} from "./components/pages/Adidas.tsx";
+import {Puma} from "./components/pages/Puma.tsx";
+import {Abibas} from "./components/pages/Abibas.tsx";
+import {Model} from "./components/pages/Model.tsx";
 
 const PATH = {
-    PAGE1: '/page1',
-    PAGE2: '/page2',
-    PAGE3: '/page3',
+    PAGE1: '/adidas',
+    PAGE2: '/puma',
+    PAGE3: '/abibas',
     PAGE4: '/error404',
+    PAGE5: '/adidas/:id',
 } as const
 
 const getNavLinkClass = ({isActive}: { isActive: boolean }) =>
     isActive ? 'activeNavLink' : 'navLink';
+
 export const App = () => {
     return (
         <div>
@@ -22,18 +25,20 @@ export const App = () => {
             <div className={styles.header}><h1>HEADER</h1></div>
             <div className={styles.body}>
                 <div className={styles.nav}>
-                    <div><NavLink to={PATH.PAGE1}>Page1</NavLink></div>
-                    <div><NavLink to={PATH.PAGE2} className={getNavLinkClass}>Page2</NavLink></div>
-                    <div><NavLink to={PATH.PAGE3} className={getNavLinkClass}>Page3</NavLink></div>
+                    <div><NavLink to={PATH.PAGE1}>Каталог adidas</NavLink></div>
+                    <div><NavLink to={PATH.PAGE2} className={getNavLinkClass}>Каталог Puma</NavLink></div>
+                    <div><NavLink to={PATH.PAGE3} className={getNavLinkClass}>Каталог Nike</NavLink></div>
                 </div>
                 <div className={styles.content}>
                     Здесь будут кроссовки
                     <Routes>
-                        <Route path={PATH.PAGE1} element={<PageOne/>}/>
-                        <Route path={PATH.PAGE2} element={<PageTwo/>}/>
-                        <Route path={PATH.PAGE3} element={<PageThree/>}/>
+                        <Route path={PATH.PAGE1} element={<Adidas/>}/>
+                        <Route path={PATH.PAGE2} element={<Puma/>}/>
+                        <Route path={PATH.PAGE3} element={<Abibas/>}/>
                         <Route path={PATH.PAGE4} element={<Error404/>}/>
+                        <Route path = {PATH.PAGE5} element={<Model/>} />
                         <Route path={"/*"} element={<Error404/>}/>
+
 
                     </Routes>
                 </div>
