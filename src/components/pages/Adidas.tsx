@@ -17,7 +17,7 @@ const adidasModel3 = image3
 
 export const adidasArr:AdidasItem[] = [
     {
-        id: 1,
+        id: 0,
         model: 'ADIDAS ADIFOM TRXN',
         collection: 'new collection1',
         price: '100200$',
@@ -25,14 +25,14 @@ export const adidasArr:AdidasItem[] = [
 
     },
     {
-        id: 2,
+        id: 1,
         model: 'ADIDAS ADIFOM SUPER',
         collection: 'new collection22',
         price: '200300$',
         picture: adidasModel2
     },
     {
-        id: 3,
+        id: 2,
         model: 'ADIDAS SUPER SUPERSKI',
         collection: 'new collection333',
         price: '300400$',
