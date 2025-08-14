@@ -4,15 +4,16 @@ import {Error404} from "./components/pages/Error404";
 import './index.css'
 import {Adidas} from "./components/pages/Adidas.tsx";
 import {Puma} from "./components/pages/Puma.tsx";
-import {Abibas} from "./components/pages/Abibas.tsx";
-import {Model} from "./components/pages/Model.tsx";
+import {Nike} from "./components/pages/Nike.tsx";
+import {Model, NikeModel} from "./components/pages/Model.tsx";
 
 const PATH = {
     PAGE1: '/adidas',
     PAGE2: '/puma',
-    PAGE3: '/abibas',
+    PAGE3: '/nike',
     PAGE4: '/error404',
     PAGE5: '/adidas/:id',
+    PAGE6: '/nike/:id',
 } as const
 
 const getNavLinkClass = ({isActive}: { isActive: boolean }) =>
@@ -34,9 +35,10 @@ export const App = () => {
                     <Routes>
                         <Route path={PATH.PAGE1} element={<Adidas/>}/>
                         <Route path={PATH.PAGE2} element={<Puma/>}/>
-                        <Route path={PATH.PAGE3} element={<Abibas/>}/>
+                        <Route path={PATH.PAGE3} element={<Nike/>}/>
                         <Route path={PATH.PAGE4} element={<Error404/>}/>
                         <Route path = {PATH.PAGE5} element={<Model/>} />
+                        <Route path = {PATH.PAGE6} element={<NikeModel/>} />
                         <Route path={"/*"} element={<Error404/>}/>
 
 
