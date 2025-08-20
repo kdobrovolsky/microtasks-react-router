@@ -13,25 +13,24 @@ export type NikeItem= {
     picture: string;
 }
 
-export const nikeArr:NikeItem[] = [
+export const nikeArr: NikeItem[] = [
     {
         id: 0,
-        model: 'ADIDAS ADIFOM TRXN',
+        model: 'NIKE AIR MAX',
         collection: 'new collection1',
         price: '1000$',
         picture: image1,
-
     },
     {
         id: 1,
-        model: 'ADIDAS ADIFOM SUPER',
+        model: 'NIKE AIR FORCE',
         collection: 'new collection22',
         price: '2000$',
         picture: image2
     },
     {
         id: 2,
-        model: 'ADIDAS SUPER SUPERSKI',
+        model: 'NIKE DUNK LOW',
         collection: 'new collection333',
         price: '3000$',
         picture: image3
