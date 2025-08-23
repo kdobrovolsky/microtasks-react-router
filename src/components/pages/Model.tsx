@@ -18,8 +18,10 @@ export const Model = () => {
 
     console.log(model)
 
-    // @ts-ignore
-    const currentModel = crossModels[model].find(item => item.id === Number(id))
+
+    const currentModel = model
+        ? crossModels[model].find(item => item.id === Number(id))
+        : null
 
 
     if(!currentModel) {

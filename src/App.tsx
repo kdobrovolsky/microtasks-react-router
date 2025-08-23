@@ -6,6 +6,7 @@ import {Adidas} from "./components/pages/Adidas.tsx";
 import {Puma} from "./components/pages/Puma.tsx";
 import {Nike} from "./components/pages/Nike.tsx";
 import {Model} from "./components/pages/Model.tsx";
+import {Prices} from "./components/pages/Prices.tsx";
 
 const PATH = {
     PAGE0: '/',
@@ -14,7 +15,7 @@ const PATH = {
     PAGE3: '/nike',
     PAGE4: '/error404',
     PAGE5: '/model/:model/:id', // измените
-    PAGE6: '/model/:model/:id',
+    PAGE6: '/prices'
 } as const
 
 const getNavLinkClass = ({isActive}: { isActive: boolean }) =>
@@ -31,6 +32,7 @@ export const App = () => {
                     <div><NavLink to={PATH.PAGE1}>Каталог adidas</NavLink></div>
                     <div><NavLink to={PATH.PAGE2} className={getNavLinkClass}>Каталог Puma</NavLink></div>
                     <div><NavLink to={PATH.PAGE3} className={getNavLinkClass}>Каталог Nike</NavLink></div>
+                    <div><NavLink to={PATH.PAGE7} className={getNavLinkClass}>Каталог Prices</NavLink> </div>
                 </div>
                 <div className={styles.content}>
                     Здесь будут кроссовки
@@ -41,7 +43,8 @@ export const App = () => {
                         <Route path={PATH.PAGE3} element={<Nike/>}/>
                         {/* Сначала специфичные маршруты */}
                         <Route path={PATH.PAGE5} element={<Model/>} />
-                        <Route path={PATH.PAGE6} element={<Model/>} />
+                        <Route path={PATH.PAGE5} element={<Model/>} />
+                        <Route path={PATH.PAGE6} element={<Prices/>}/>
                         {/* Затем общие */}
                         <Route path={PATH.PAGE4} element={<Error404/>}/>
                         <Route path="/*" element={<Error404/>}/>
