@@ -32,7 +32,7 @@ export const App = () => {
                     <div><NavLink to={PATH.PAGE1}>Каталог adidas</NavLink></div>
                     <div><NavLink to={PATH.PAGE2} className={getNavLinkClass}>Каталог Puma</NavLink></div>
                     <div><NavLink to={PATH.PAGE3} className={getNavLinkClass}>Каталог Nike</NavLink></div>
-                    <div><NavLink to={PATH.PAGE7} className={getNavLinkClass}>Каталог Prices</NavLink> </div>
+                    <div><NavLink to={PATH.PAGE6} className={getNavLinkClass}>Каталог Prices</NavLink> </div>
                 </div>
                 <div className={styles.content}>
                     Здесь будут кроссовки
