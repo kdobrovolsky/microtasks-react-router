@@ -1,10 +1,9 @@
-
 import styles from './Prices.module.css';
-import {use, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import {useSearchParams} from "react-router-dom";
 
 type Props = {};
-export const Prices = (props: Props) => {
+export const Prices = (_props: Props) => {
     let [searchParams, setSearchParams] = useSearchParams();
     const sneakers = [
         {
