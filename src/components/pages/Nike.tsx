@@ -46,7 +46,7 @@ export const Nike = () => {
             <h2> Nike</h2>
             <div style={{display: 'flex', justifyContent: 'center'}} >
                 {nikeArr.map((item: NikeItem) => (
-                    <Link key={item.id} to={`/nike/${item.id}`}>
+                    <Link key={item.id} to={`/model/nike/${item.id}`}>
                         <img
                             src = {item.picture}
                             alt = {item.model}

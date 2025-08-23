@@ -46,7 +46,7 @@ export const Adidas = () => {
             <h2> ADIDAS</h2>
             <div style={{display: 'flex', justifyContent: 'center'}}>
                 {adidasArr.map((adidas) => (
-                    <Link key = {adidas.id} to = {`/adidas/${adidas.id}`}>
+                    <Link key={adidas.id} to={`/model/adidas/${adidas.id}`}>
                         <img
                         src = {adidas.picture}
                         alt = {adidas.model}

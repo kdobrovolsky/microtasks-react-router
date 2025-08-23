@@ -13,14 +13,14 @@ const crossModels: CrossModels = {
 }
 
 export const Model = () => {
-    debugger
-    const model = useParams()
-    console.log(model.id);
-    console.log(model.model);
 
-    const currentModel = model
-    ? crossModels[model.d].find(item => item.id === Number(id))
-        : null;
+    const {model,id} = useParams<{model: string, id: string}>()
+
+    console.log(model)
+
+    // @ts-ignore
+    const currentModel = crossModels[model].find(item => item.id === Number(id))
+
 
     if(!currentModel) {
         return <h2>Model undefined</h2>;

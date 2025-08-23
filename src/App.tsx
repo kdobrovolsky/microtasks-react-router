@@ -13,8 +13,8 @@ const PATH = {
     PAGE2: '/puma',
     PAGE3: '/nike',
     PAGE4: '/error404',
-    PAGE5: '/adidas/:id',
-    PAGE6: '/nike/:id',
+    PAGE5: '/model/:model/:id', // измените
+    PAGE6: '/model/:model/:id',
 } as const
 
 const getNavLinkClass = ({isActive}: { isActive: boolean }) =>
