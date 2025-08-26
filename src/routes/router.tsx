@@ -19,7 +19,7 @@ const PATH = {
     PRICES: '/prices'
 } as const
 
-export const router = createBrowserRouter([
+    export const router = createBrowserRouter([
     {
         path: "/",
         element: <App/>,
