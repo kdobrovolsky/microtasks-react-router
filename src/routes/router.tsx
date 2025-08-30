@@ -1,13 +1,14 @@
-import {
-    createBrowserRouter,
-} from "react-router-dom";
+import {createBrowserRouter,} from "react-router-dom";
 import {App} from "../App.tsx";
 import {Error404} from "../components/pages/Error404.tsx";
 import {Adidas} from "../components/pages/Adidas.tsx";
-import {Puma} from "../components/pages/Puma.tsx";
+
 import {Nike} from "../components/pages/Nike.tsx";
 import {Model} from "../components/pages/Model.tsx";
 import {Prices} from "../components/pages/Prices.tsx";
+import {Puma} from "../components/pages/Puma.tsx";
+import {ProtectedPage} from "../components/pages/ProtectedPage.tsx";
+import {ProtectedRoute} from "./ProtectedRoute.tsx";
 
 const PATH = {
     PAGE0: '/',
@@ -16,11 +17,13 @@ const PATH = {
     NIKE: '/nike',
     ERROR: '/error404',
     MODEL: '/model/:model/:id',
-    PRICES: '/prices'
+    PRICES: '/prices',
+    PROTECTED: '/protectedPage',
 } as const
 
 
-    export const router = createBrowserRouter([
+// @ts-ignore
+export const router = createBrowserRouter([
     {
         path: "/",
         element: <App/>,
@@ -49,6 +52,16 @@ const PATH = {
             {
                 path: PATH.PRICES,
                 element: <Prices/>
+            },
+            {
+
+                path: PATH.PROTECTED,
+                element: (
+                    <ProtectedRoute>
+                        <ProtectedPage/>
+                    </ProtectedRoute>
+                )
+
             },
             {
                 path: PATH.ERROR,

@@ -15,9 +15,9 @@ export const App = () => {
                     <div><NavLink to="/puma" className={getNavLinkClass}>Каталог Puma</NavLink></div>
                     <div><NavLink to="/nike" className={getNavLinkClass}>Каталог Nike</NavLink></div>
                     <div><NavLink to="/prices" className={getNavLinkClass}>Каталог Prices</NavLink></div>
+                    <div><NavLink to="/protectedPage" className={getNavLinkClass}>ProtectedPage</NavLink></div>
                 </div>
                 <div className={styles.content}>
-                    Здесь будут кроссовки
                     <Outlet/> {/* Здесь будут рендериться дочерние компоненты */}
                 </div>
             </div>
