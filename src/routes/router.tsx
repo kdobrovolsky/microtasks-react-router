@@ -1,4 +1,6 @@
-import {createBrowserRouter,} from "react-router-dom";
+import {
+    createBrowserRouter,
+} from "react-router-dom";
 import {App} from "../App.tsx";
 import {Error404} from "../components/pages/Error404.tsx";
 import {Adidas} from "../components/pages/Adidas.tsx";
@@ -22,8 +24,7 @@ const PATH = {
 } as const
 
 
-// @ts-ignore
-export const router = createBrowserRouter([
+    export const router = createBrowserRouter([
     {
         path: "/",
         element: <App/>,
@@ -56,11 +57,14 @@ export const router = createBrowserRouter([
             {
 
                 path: PATH.PROTECTED,
-                element: (
-                    <ProtectedRoute>
-                        <ProtectedPage/>
-                    </ProtectedRoute>
-                )
+                element:
+                    (
+                        <ProtectedRoute>
+                            <ProtectedPage/>
+                        </ProtectedRoute>
+                    )
+
+
 
             },
             {
