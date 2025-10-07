@@ -83,11 +83,12 @@ export const router = createBrowserRouter([
         element: <App/>,
         errorElement: <Navigate to={PATH.ERROR}/>,
         children: [
+            ...publicRoutes,
             {
                 element: <PrivateRoute/>,
                 children: privateRoutes
             },
-            ...publicRoutes,
+
         ]
     },
 ]);
